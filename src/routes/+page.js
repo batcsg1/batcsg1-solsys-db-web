@@ -5,7 +5,7 @@ export async function load() {
             throw new Error('Failed to fetch data');
         }
         const planets = await response.json();
-        return { props: { planets } };
+        return {planets};
     } catch (err) {
         console.error(err);
         return { props: { error: 'Unable to load data at the moment. Please try again later.' } };
