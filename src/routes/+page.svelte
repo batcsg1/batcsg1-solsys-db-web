@@ -6,6 +6,13 @@
     // Test to see if planet data or error comes through
     console.log('Planets:', planets);
     console.log('Error:', error);
+
+    let columnNames;
+    if (planets.length > 0){
+        columnNames = Object.keys(planets[0]);
+    }
+
+    console.log(columnNames);
 </script>
 
 {#if error}
