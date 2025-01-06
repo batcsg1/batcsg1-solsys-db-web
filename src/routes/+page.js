@@ -8,6 +8,6 @@ export async function load() {
         return {planets};
     } catch (err) {
         console.error(err);
-        return { props: { error: 'Unable to load data at the moment. Please try again later.' } };
+        return { error: 'Unable to load data at the moment. Please try again later.' };
     }
 }
