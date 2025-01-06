@@ -1,0 +1,8 @@
+body {
+    font-family:'Router-Medium';
+    background-color: black;
+}
+@font-face {
+    font-family: 'Router-Medium';
+    src: url(../lib/fonts/fonnts.com-Router_Medium.woff2) format('woff2');
+}
