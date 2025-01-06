@@ -22,11 +22,29 @@
 {:else if !planets || planets.length === 0}
     <p>Loading...</p>
 {:else}
-    <ul>
+<h1>About the Planets</h1>
+<table>
+    <thead>
+        <tr>
+            {#each columnNames as column}
+                <th>{column}</th>
+            {/each}
+        </tr>
+    </thead>
+    <tbody>
+        <!--Iterate over each planet-->
         {#each planets as planet}
-            <li>{planet.name}</li>
+            <!--Each row corresponds to a planet-->
+            <tr> 
+                <!--Iterate over all the column names-->
+                {#each columnNames as column}
+                    <!--Each planet column value-->
+                    <td>{planet[column]}</td>
+                {/each}
+            </tr>
         {/each}
-    </ul>
+    </tbody>
+</table>
 {/if}
 
 <style>
