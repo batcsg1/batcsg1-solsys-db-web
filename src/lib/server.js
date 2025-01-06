@@ -34,7 +34,7 @@ sql.connect(dbConfig)
     .catch(err => console.error('Database connection failed:', err));
 
 // Example API endpoint to query db for data, to respond to the frontend client with, when client makes GET request
-app.get('/data', async (req, res) => {
+app.get('/planets', async (req, res) => {
     //Data that app will respond back with
     try {
         const pool = await sql.connect(dbConfig); //Connecting to SQL Server

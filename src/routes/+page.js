@@ -1,7 +1,7 @@
 export async function load() {
     try {
         //Fetch data from our backend server
-        const response = await fetch('http://localhost:3000/data');
+        const response = await fetch('http://localhost:3000/planets');
         
         // Check if the fetch request failed
         if (!response.ok) {
@@ -16,7 +16,7 @@ export async function load() {
         if (planets.length > 0) {
             columnNames = Object.keys(planets[0]);
         }
-        
+
         return { planets, columnNames };
     } catch (err) {
         // Log the error for debugging purposes
