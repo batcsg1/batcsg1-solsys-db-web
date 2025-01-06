@@ -48,8 +48,27 @@
 {/if}
 
 <style>
-    .error-message {
-        color: red;
-        font-weight: bold;
+    table{
+        background-color: rgb(59, 58, 80);
+        padding: 0.2em;
+        border-radius: 0.4em;
+    }
+    h1{
+        color: lightblue;
+    }
+    thead{
+        color: white;
+    }
+    tbody{
+        background: rgb(18, 29, 39);
+    }
+    th{
+        padding: 0.4em;
+    }
+    tbody td{
+        text-align: center;
+        font-size: small;
+        color: white;
+        padding: 0.8em;
     }
 </style>
