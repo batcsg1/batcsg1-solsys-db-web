@@ -42,7 +42,7 @@ app.get('/data', async (req, res) => {
         res.json(result.recordset);
     } catch (err) {
         console.error(err);
-        res.status(500).send('Database query failed');
+        res.status(500).json({ message: 'Server is currently unavailable. Please try again later.' });
     }
 });
 
