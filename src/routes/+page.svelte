@@ -1,20 +1,13 @@
 <script>
+    //Pass in our load function
     export let data;
-    //Access planets and error props from the load function
-    const { planets, error } = data;
-
-    // Test to see if planet data or error comes through
+    //Extract the props from the function
+    const { planets, columnNames, error } = data;
+    //Display the props
+    console.log('Props:')
     console.log('Planets:', planets);
+    console.log('Column Names:', columnNames);
     console.log('Error:', error);
-
-    // Code for loading in column names
-    let columnNames;
-    if (planets.length > 0){
-        //Start with column names of the first planet object
-        columnNames = Object.keys(planets[0]);
-    }
-    //Display the column names to the console
-    console.log(columnNames);
 </script>
 
 {#if error}
@@ -45,9 +38,15 @@
         {/each}
     </tbody>
 </table>
+
 {/if}
 
 <style>
+    .error-message {
+        color: red;
+        font-weight: bold;
+    }
+
     table{
         background-color: rgb(59, 58, 80);
         padding: 0.2em;
