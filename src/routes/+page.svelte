@@ -7,11 +7,13 @@
     console.log('Planets:', planets);
     console.log('Error:', error);
 
+    // Code for loading in column names
     let columnNames;
     if (planets.length > 0){
+        //Start with column names of the first planet object
         columnNames = Object.keys(planets[0]);
     }
-
+    //Display the column names to the console
     console.log(columnNames);
 </script>
 
